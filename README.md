@@ -1,2 +1,2 @@
 # supernoel
-Jeu supernova fait avec Construct 2
+Jeu supernoel fait avec Construct 2
