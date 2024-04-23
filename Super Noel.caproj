@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Super Noel</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>3dsiu9xh7ax6l</unique-id>
+    <saved-with-version>27900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1000</width>
+        <height>700</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Ciel" sid="850511901071002">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="564742517948946" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\mathi\Documents\Projet\RenneCadeaux\Sprites\cieletoile.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Neige" sid="182021054523079">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="943207714598511">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="912169478703105" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\mathi\Documents\Projet\RenneCadeaux\Sprites\neige.png">
+                        <collision-poly>
+                            <point x="0" y="0.928571" />
+                            <point x="1" y="0.928571" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Kadou" sid="808984688461601">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="442509896821064">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Wrap" sid="818721019351866">
+                    <behavior id="wrap" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="735836997310453" speed="5">
+                    <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\mathi\Documents\Projet\RenneCadeaux\Sprites\rudolf.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.472727" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.527273" />
+                            <point x="0.981818" y="1" />
+                            <point x="0.490909" y="0.981818" />
+                            <point x="0.0181818" y="1" />
+                            <point x="0" y="0.490909" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\mathi\Documents\Projet\RenneCadeaux\Sprites\AnimationRenne\001.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.472727" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.527273" />
+                            <point x="0.981818" y="1" />
+                            <point x="0.490909" y="0.981818" />
+                            <point x="0.0181818" y="1" />
+                            <point x="0" y="0.490909" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="1" name="electric" pingpong="0" repeatcount="1" repeatto="0" sid="244906912832160" speed="5">
+                    <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\mathi\Documents\Projet\RenneCadeaux\Sprites\renneelectrik.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.527273" y="0" />
+                            <point x="1" y="0.0181818" />
+                            <point x="1" y="0.490909" />
+                            <point x="0.963636" y="0.981818" />
+                            <point x="0.545455" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.454545" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\mathi\Documents\Projet\RenneCadeaux\Sprites\rudolf.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.545455" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.490909" />
+                            <point x="1" y="1" />
+                            <point x="0.490909" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.509091" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Cadeau" sid="999867228890148">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="428024662316778">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="521758530373692" speed="5">
+                    <frame duration="1" hotspotX="0.514286" hotspotY="0.5" original-source="C:\Users\mathi\Documents\Projet\RenneCadeaux\Sprites\cadeau.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.514286" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0.542857" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.53125" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SucreDorge" sid="820541439214975">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="128931728410703">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="266252433293330" speed="5">
+                    <frame duration="1" hotspotX="0.514286" hotspotY="0.5" original-source="C:\Users\mathi\Documents\Projet\RenneCadeaux\Sprites\Sucredorge.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.485714" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.40625" />
+                            <point x="1" y="1" />
+                            <point x="0.514286" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="692960136491954">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="458352021203926" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Score" sid="288012271190268">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite2" sid="913398956287820">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="184180663147808" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Echec" sid="558682500233794">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="GameOver" sid="285519480065887">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Keyboard" sid="449005127221045">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Particles" sid="907268516166415">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="Particles2" sid="647452877922049">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="Audio" sid="577203705153722">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="eclair" sid="510771944073082">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="280461803217697">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="974437249415620" speed="5">
+                    <frame duration="1" hotspotX="0.514286" hotspotY="0.5" original-source="C:\Users\mathi\Documents\Projet\RenneCadeaux\Sprites\eclair.png">
+                        <collision-poly>
+                            <point x="0.457143" y="0" />
+                            <point x="0" y="0" />
+                            <point x="0" y="0.40625" />
+                            <point x="0" y="1" />
+                            <point x="0.514286" y="1" />
+                            <point x="1" y="1" />
+                            <point x="1" y="0.46875" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Particles3" sid="167989742085974">
+            <plugin id="Particles" />
+            <texture original-source="C:\Users\mathi\Documents\Projet\RenneCadeaux\Sprites\eclair.png" />
+        </object-type>
+        <object-type name="Text" sid="503816751297167">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="17" />
+        <global-instance type="Audio" uid="19">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="Collect.m4a" />
+        <file name="Collect.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="Free Christmas Music - 8-Bit Jingle Bells.m4a" />
+        <file name="Free Christmas Music - 8-Bit Jingle Bells.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

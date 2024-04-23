@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="Vitesse" sid="189458974080229" static="0" type="number">1</variable>
+        <variable constant="0" name="Echec" sid="251039665389600" static="0" type="number">0</variable>
+        <variable constant="0" name="Score" sid="643735648676780" static="0" type="number">0</variable>
+        <event-block sid="783656086462154">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="114347825297805" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="113641712012823" type="Audio">
+                    <param id="0" name="Audio file">Free Christmas Music - 8-Bit Jingle Bells</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="708108291080192" type="System">
+                    <param id="0" name="Variable">Echec</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="396763092186365" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="966833647562745" type="System">
+                    <param id="0" name="Variable">Vitesse</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="111460431418704" title="Interface">
+            <sub-events>
+                <event-block sid="712953483428343">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="627643730897907" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="265167780422198" type="Score">
+                            <param id="0" name="Text">&quot;Score : &quot;&amp;Score</param>
+                        </action>
+                        <action id="0" name="Set text" sid="159920553903516" type="Echec">
+                            <param id="0" name="Text">&quot;Raté : &quot;&amp;Echec</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="162093007721084">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="566482934575416" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="918325308315089" type="Kadou">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="985296091571382">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="482677735637687" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="737161990388936" type="Kadou">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="170003136285801" title="apparition">
+            <sub-events>
+                <event-block sid="958850750163047">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="191923405012133" type="System">
+                            <param id="0" name="Variable">Echec</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="987056357094757" type="System">
+                            <param id="0" name="Interval (seconds)">2/Vitesse</param>
+                        </condition>
+                        <condition id="-16" name="Pick random instance" sid="524441283376202" type="System">
+                            <param id="0" name="Object">Sprite</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="939080610715088">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="184682422310181" type="System">
+                                    <param id="0" name="First value">random(0,1)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">0.3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="202324995034867" type="Sprite">
+                                    <param id="0" name="Object">eclair</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="595524179334939" type="eclair">
+                                    <param id="0" name="Angle">90</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="113906714659543">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="798117504731925" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="916684498121749">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="298895964454881" type="System">
+                                            <param id="0" name="First value">random(0,1)</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Second value">0.5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="831954695916616" type="Sprite">
+                                            <param id="0" name="Object">Cadeau</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="491116074447126" type="Cadeau">
+                                            <param id="0" name="Angle">90</param>
+                                        </action>
+                                        <action behavior="Bullet" id="0" name="Set speed" sid="558082627399671" type="Cadeau">
+                                            <param id="0" name="Speed">150*Vitesse</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="944682747541933">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="938695447810357" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="814736298213185" type="Sprite">
+                                            <param id="0" name="Object">SucreDorge</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="809643779536279" type="SucreDorge">
+                                            <param id="0" name="Angle">90</param>
+                                        </action>
+                                        <action behavior="Bullet" id="0" name="Set speed" sid="868450753724883" type="SucreDorge">
+                                            <param id="0" name="Speed">100*Vitesse</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="511116947783298" title="destruction">
+            <sub-events>
+                <event-block sid="861165875832022">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="574714247604280" type="Kadou">
+                            <param id="0" name="Object">Cadeau</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="832028284264176" type="Cadeau" />
+                        <action id="-10" name="Add to" sid="970176538886077" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="998036097936737" type="Cadeau">
+                            <param id="0" name="Object">Particles2</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="577637994644949" type="Audio">
+                            <param id="0" name="Audio file">Collect</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="664711013088586">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="316019035491313" type="Kadou">
+                            <param id="0" name="Object">SucreDorge</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="530145173805346" type="SucreDorge" />
+                        <action id="-10" name="Add to" sid="474795848462940" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="418561959323592" type="SucreDorge">
+                            <param id="0" name="Object">Particles2</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="404745315315702" type="Audio">
+                            <param id="0" name="Audio file">Collect</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="167706618283939">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="192822335143963" type="Sprite2">
+                            <param id="0" name="Object">Cadeau</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="549428446436827" type="Cadeau" />
+                        <action id="-10" name="Add to" sid="312293989787763" type="System">
+                            <param id="0" name="Variable">Echec</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="736034562316742">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="178823024901614" type="Sprite2">
+                            <param id="0" name="Object">SucreDorge</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="841253592537454" type="SucreDorge" />
+                        <action id="-10" name="Add to" sid="842621720658131" type="System">
+                            <param id="0" name="Variable">Echec</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="663035965653236">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="731817610536703" type="Kadou">
+                            <param id="0" name="Object">eclair</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="614414425436168" type="eclair" />
+                        <action id="0" name="Spawn another object" sid="287871411737057" type="eclair">
+                            <param id="0" name="Object">Particles3</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="938233160052268" type="Kadou">
+                            <param id="0" name="Animation">&quot;electric&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="0" name="Set ignoring input" sid="950446504021243" type="Kadou">
+                            <param id="0" name="Input">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="842115517038109" type="System">
+                            <param id="0" name="Seconds">2.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="918602530188288" type="Kadou">
+                            <param id="0" name="Animation">&quot;default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="0" name="Set ignoring input" sid="140542818652060" type="Kadou">
+                            <param id="0" name="Input">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="414006131900581">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="646911902140104" type="System">
+                    <param id="0" name="Variable">Echec</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="702125755315149" type="GameOver">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="489772385947665" type="Cadeau" />
+                <action id="-9" name="Destroy" sid="551702218838353" type="SucreDorge" />
+                <action id="-9" name="Destroy" sid="865161229488113" type="eclair" />
+            </actions>
+            <sub-events>
+                <event-block sid="539379841725394">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="527444198355808" type="Keyboard">
+                            <param id="0" name="Key">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="857941879835602" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="367450983803274">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="241297081011130" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="542504150130856" type="System">
+                    <param id="0" name="Variable">Vitesse</param>
+                    <param id="1" name="Value">max(1,1+ceil((Score-10)/10)/5)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
