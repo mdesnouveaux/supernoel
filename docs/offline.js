@@ -1,0 +1,32 @@
+﻿{
+	"version": 1713807387,
+	"fileList": [
+		"data.js",
+		"c2runtime.js",
+		"jquery-3.4.1.min.js",
+		"offlineClient.js",
+		"images/ciel-sheet0.png",
+		"images/neige-sheet0.png",
+		"images/kadou-sheet0.png",
+		"images/kadou-sheet1.png",
+		"images/kadou-sheet2.png",
+		"images/cadeau-sheet0.png",
+		"images/sucredorge-sheet0.png",
+		"images/sprite-sheet0.png",
+		"images/sprite2-sheet0.png",
+		"images/particles.png",
+		"images/particles2.png",
+		"images/eclair-sheet0.png",
+		"images/particles3.png",
+		"media/collect.m4a",
+		"media/collect.ogg",
+		"media/free christmas music - 8-bit jingle bells.m4a",
+		"media/free christmas music - 8-bit jingle bells.ogg",
+		"icon-16.png",
+		"icon-32.png",
+		"icon-114.png",
+		"icon-128.png",
+		"icon-256.png",
+		"loading-logo.png"
+	]
+}
